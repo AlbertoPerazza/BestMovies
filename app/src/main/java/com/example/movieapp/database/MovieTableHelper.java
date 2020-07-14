@@ -10,6 +10,8 @@ public class MovieTableHelper implements BaseColumns {
     public static final String DESCRIPTION = "description";
     public static final String IMAGE_LIST = "image_list";
     public static final String IMAGE_DETAILS = "image_details";
+    public static final String RATING = "rating";
+    public static final String FAVOURITE = "favourite";
     public static final String API_ID = "api_id";
 
 
@@ -19,6 +21,8 @@ public class MovieTableHelper implements BaseColumns {
             DESCRIPTION + " TEXT , " +
             TITLE + " TEXT , " +
             IMAGE_LIST + " TEXT , " +
+            RATING + " TEXT , " +
+            FAVOURITE + " INT , " +
             IMAGE_DETAILS + " TEXT , " +
             API_ID + " TEXT ) ;";
 }

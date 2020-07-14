@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.movieapp.R;
 import com.example.movieapp.database.MovieProvider;
 import com.example.movieapp.database.MovieTableHelper;
@@ -41,11 +42,8 @@ public class MovieDetails extends AppCompatActivity {
             descrizione.setText(cursor.getString(cursor.getColumnIndex(MovieTableHelper.DESCRIPTION)));
         }
 
-        if(cursor.getString(cursor.getColumnIndex(MovieTableHelper.IMAGE_DETAILS)).equals("null")){
-            Glide.with(this).load(R.drawable.broken_image_24px).into(imageView);
-        }else {
-            Glide.with(this).load("https://image.tmdb.org/t/p/w500/" + cursor.getString(cursor.getColumnIndex(MovieTableHelper.IMAGE_DETAILS))).into(imageView);
-        }
-        }
+        Glide.with(this).applyDefaultRequestOptions(new RequestOptions().placeholder(R.drawable.broken_image_24px).error(R.drawable.broken_image_24px)).
+                load("https://image.tmdb.org/t/p/w500/" + cursor.getString(cursor.getColumnIndex(MovieTableHelper.IMAGE_DETAILS))).into(imageView);
+    }
 
 }

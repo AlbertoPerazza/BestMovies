@@ -18,4 +18,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+    <TextView
+        android:id="@+id/ratingList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4888"
+        android:text="6.0"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        android:textColor="#f5be40"
+        android:paddingHorizontal="2dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageFavourite"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="#4888"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@android:drawable/star_off" />
 </androidx.constraintlayout.widget.ConstraintLayout>

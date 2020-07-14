@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">MovieApp</string>
-    <string name="Description">No description available sorry</string>
-    <string name="Title">No title available sorry</string>
+    <string name="app_name">Best Movies</string>
+    <string name="Description">Nessuna descrizione disponibile</string>
+    <string name="Title">Titolo non disponibile</string>
+    <string name="Search">Cerca un film nella tua applicazione</string>
 </resources>
